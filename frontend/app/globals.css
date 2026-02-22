@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base Background - Soft Cream/White */
+    --background: 0 0% 100%;
+    --foreground: 140 15% 20%; /* Dark Forest Green Text */
+
+    /* Card Backgrounds */
+    --card: 0 0% 100%;
+    --card-foreground: 140 15% 20%;
+
+    /* Popovers */
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 15% 20%;
+
+    /* PRIMARY COLOR: Sage Green (#8CAE96) */
+    --primary: 138 19% 62%;
+    --primary-foreground: 0 0% 100%; /* White text on Sage buttons */
+
+    /* SECONDARY: Lighter Minty Sage */
+    --secondary: 138 20% 94%;
+    --secondary-foreground: 140 25% 30%;
+
+    /* MUTED: Greyish Green for disabled states/borders */
+    --muted: 138 20% 96%;
+    --muted-foreground: 140 10% 45%;
+
+    /* ACCENT: Used for hover effects */
+    --accent: 138 20% 94%;
+    --accent-foreground: 140 25% 30%;
+
+    /* DESTRUCTIVE: Soft Red */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* BORDERS & RINGS */
+    --border: 138 15% 88%;
+    --input: 138 15% 88%;
+    --ring: 138 19% 62%; /* Focus ring matches Primary Sage */
+
+    --radius: 0.75rem; /* Slightly softer, rounder corners */
+  }
+
+  .dark {
+    /* Dark Mode - Deep Forest Theme */
+    --background: 140 20% 10%;
+    --foreground: 138 10% 90%;
+
+    --card: 140 20% 12%;
+    --card-foreground: 138 10% 90%;
+
+    --popover: 140 20% 12%;
+    --popover-foreground: 138 10% 90%;
+
+    --primary: 138 19% 62%;
+    --primary-foreground: 140 20% 10%;
+
+    --secondary: 140 20% 20%;
+    --secondary-foreground: 138 10% 90%;
+
+    --muted: 140 20% 20%;
+    --muted-foreground: 138 10% 60%;
+
+    --accent: 140 20% 20%;
+    --accent-foreground: 138 10% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 140 20% 20%;
+    --input: 140 20% 20%;
+    --ring: 138 19% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes slow-fill {
+  0% {
+    width: 0%;
+  }
+
+  70% {
+    width: 85%;
+  }
+
+  100% {
+    width: 95%;
+  }
+}
+
+.animate-slow-fill {
+  animation: slow-fill 10s ease-out forwards;
+}
